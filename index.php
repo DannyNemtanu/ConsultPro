@@ -3,6 +3,9 @@
 <!-- Including Navigation -->
 <?php include 'inc/navigation.php'; ?>
 
+<style>
+<?php include '../css/style.css';?>
+</style>
 <!-- Body Starts Here -->
   <!-- Header -->
     <header>
