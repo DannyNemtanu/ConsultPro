@@ -14,11 +14,11 @@
       <div class="row header-form">
         <form class="home-form" action="index.html" method="post">
           <label for="username">Username</label><br>
-          <input type="text" name="username" id="username" placeholder="Username"><br>
+          <input type="text" name="username" placeholder="Username"><br>
           <label for="username">Password</label><br>
-          <input type="password" name="pass"  id="pass" placeholder="Password">
+          <input type="password" name="pass" placeholder="Password">
           <div class="form-footer">
-            <button type="submit" id="submit-btn" class="btn btn-primary header-inf-btn">LOG IN</button><br>
+            <button type="button" class="btn btn-primary header-inf-btn">LOG IN</button> <br>
             <span>Don't have an account yet?</span><br>
             <span><a id="color-red" href="#">SIGN UP</a></span><br>
           </div>
@@ -78,7 +78,6 @@
         <h4>by <span id="bold">Jonathan Lynch</span></h4>
       </div>
     </div>
-    <pre id="object"></pre>
     <!-- Body Ends -->
 
 
