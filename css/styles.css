@@ -11,26 +11,56 @@ li{
 #bold{
   font-weight: bold;
 }
+#no-margin{
+  margin: 0;
+}
+.no-border{
+  border: none;
+}
 h1,h2,h3,h4,h5,h6{
   font-weight: 300;
 }
-.title{
-  text-align: center;
-}
+.title{text-align: center;}
 .container{
   width: 90%;
   margin: 0 auto;
 }
 /*Navigation*/
 .navbar{
-  margin: 0;
   border:none;
-  margin-bottom: -50px;
+  margin: 0;
 }
 .navbar-default{
   background-color: rgba(0, 0, 0, 0) ;
   border-color: rgba(0, 0, 0, 0) ;
 }
+
+.nav-sign{
+  border:none;
+  margin-top: 10%;
+}
+.nav-sign-modal{width: 30%;}
+
+.nav-sign-modal input{
+  margin: 10px 0px;
+}
+.nav-form-btn{
+  margin: 0px 20px;
+  width: 40%;
+  float: left;
+}
+.btn-row{
+  width: 100%;
+  margin: 0 auto;
+}
+.nav-well{
+  border:2px solid #333;
+}
+.nav-well input:focus{
+  border-color: #ff3333;
+  box-shadow: inset 0 1px 1px rgba(168, 10, 10, 0.527), 0 0 8px rgba(211, 39, 27, 0.6);
+}
+
 /*Header Banner*/
 .header-banner{
   height: 550px;
@@ -49,14 +79,14 @@ h1,h2,h3,h4,h5,h6{
   float: left;
 }
 
-.header-banner h1, .header-banner p{
+.header-info h1, .header-banner p{
   font-size: 1.2em;
   font-weight: 300;
   text-align: right;
 }
 
-.jumbotron h1{
-  font-size: 2.5em;
+.header-info h1{
+  font-size: 3em !important;
 }
 
 .header-inf-btn {
@@ -66,7 +96,7 @@ h1,h2,h3,h4,h5,h6{
   width: 50%;
   height: 60px;
   float: right;
-  margin-top: 20px;
+  margin-top: 10px;
   border: none;
 }
 .home-form .header-inf-btn{
@@ -142,10 +172,107 @@ label{
   font-weight: lighter;
   font-style: italic;
 }
+/*Home Page End*/
+
+/*Consultant Page*/
+/*Header*/
+.consultant-content{
+  background-color: #f5f5f5;
+  padding: 40px;
+}
+.consultant-banner{
+  background-image: url('../img/consultantHeaderBg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  color:#f5f5f5;
+  text-align: center;
+  padding: 5%;
+}
+.consultant-banner img{
+  width: 180px;
+}
+
+/*Cosnultant Left Side*/
+.dashboard{
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 20px;
+}
+.dashboard .text{
+  margin-left: 20px;
+}
+.dashboard .dash-info{
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+.dashboard .dash-info h1{
+  color: #438eff;
+  font-size: 3em;
+}
+.consultant-main{
+  background-color: #fff;
+  padding: 40px;
+}
+.section-content{
+  margin-top: 20px;
+}
+
+.section-content>div>img{
+  width: 50%;
+  margin: 5% 25%;
+}
+.section-content h1{
+  font-size: 1.5em;
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+/*Consultant Left Side*/
+.consultant-raling{
+  background-color: #f5f5f5;
+}
+.consultant-raling-padding{
+  background-color: #fff;
+  padding: 40px 10px;
+  height: 100%;
+}
+.consultant-suugested>div{
+  padding: 20px 0px;
+  border-bottom: 1px solid #ccc;
+}
+.consultant-suugested>div:last-child{
+  border:none;
+}
+.consultant-suugested h1,h2,h3,h4,h5,h6{
+  margin: 5px;
+}
+.consultant-suugested img{
+  width: 85%;
+  border-radius: 50%;
+  margin: 5%;
+  text-align: center;
+}
+.suggested-btn{
+  background:none;
+  color: #438eff;
+  text-align: center;
+  width: 100%;
+}
+.share .row a img{
+  padding: 30px 0px;
+}
+.share img{
+  width:100%;
+  padding: 5px;
+}
+/*Content*/
 
 /*Footer*/
 footer{
-
+  height: 400px;
+  overflow: hidden;
   background-color: #3399ff;
   box-shadow: inset 0px 6px 9.4px 0.6px rgba(1, 1, 1, 0.43);
 }
