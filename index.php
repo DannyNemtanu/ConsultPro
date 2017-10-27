@@ -7,7 +7,7 @@
   <div class="jumbotron header-banner">
     <div class="container-fluid">
       <div class="row header-info">
-           <h1>FIND CONSULTANTS <br> IN MINUTES</h1>
+           <h1>FIND CONSULTANTS<br> IN MINUTES</h1>
            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
            <button type="button" class="btn btn-primary header-inf-btn">EXPLORE NOW</button>
       </div>
@@ -108,7 +108,6 @@
         <h4>by <span id="bold">Jonathan Lynch</span></h4>
       </div>
     </div>
-    <pre id="object"></pre>
     <!-- Body Ends -->
 
 
