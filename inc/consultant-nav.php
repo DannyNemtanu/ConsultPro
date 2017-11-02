@@ -15,7 +15,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="consultant.php">Consultant</a></li>
+        <li><a href="consultant.php">Search</a></li>
+        <li><a href="consultant.php">Explore</a></li>
         <li><a href="user.php">Customer</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
@@ -26,7 +27,6 @@
             <li><a href="#">Log Out</a></li>
           </ul>
         </li>
-        <li><button href="#" type="button" class="btn btn-primary nav-sign" data-toggle="modal" data-target=".signup" >Sign Up</button></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

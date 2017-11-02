@@ -10,11 +10,11 @@ $(document).ready(function(){
     messagingSenderId: "373394527981"
   };
   firebase.initializeApp(config);
-  
-  
+
+
   var user = firebase.database().ref('users/');
   var ref = firebase.database().ref('users/')
-  
+
   // Submit Form
   $('#submit-btn').click(function(e){
     e.preventDefault();
@@ -51,4 +51,11 @@ $(document).ready(function(){
     console.log('Error');
     console.log(err);
   }
+
+  // testing edit action
+  $('.edit img').click(function(){
+    var alert = $(this.class().val())
+    alert('Hello World!');
+  });
+
 });

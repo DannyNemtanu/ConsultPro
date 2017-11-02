@@ -5,6 +5,9 @@
 li{
   display: inline-block;
 }
+#big-text{
+  font-size: 4em;
+}
 #color-red{
   color:#ff3333;
 }
@@ -21,10 +24,7 @@ h1,h2,h3,h4,h5,h6{
   font-weight: 300;
 }
 .title{text-align: center;}
-.container{
-  width: 90%;
-  margin: 0 auto;
-}
+
 /*Navigation*/
 .navbar{
   border:none;
@@ -186,8 +186,16 @@ label{
   background-size: cover;
   height: 400px;
   color:#f5f5f5;
+  text-align: left;
+}
+.cons-banner-left{
   text-align: center;
-  padding: 5%;
+}
+.cons-desc{
+  margin-top: 10%;
+}
+.cons-desc h1{
+  text-align: center;
 }
 .consultant-banner img{
   width: 180px;
@@ -267,12 +275,45 @@ label{
   width:100%;
   padding: 5px;
 }
+.section-content{
+  position: relative;
+}
+.edit{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 1;
+}
+.edit>div img{
+  cursor: pointer;
+  width: 60%;
+  position: absolute;
+}
+.desc-btn{
+  width: 100%;
+  text-align: center;
+}
+.desc-btn button{
+  background: none;
+  color: #333;
+}
+.contact-bn{
+  padding: 40px;
+  background-image: url('../img/consContactBg.jpg');
+  color:#f5f5f5;
+}
+.contact-btn{
+  background-color: rgba(22, 115, 255, 0.61);
+  padding: 20px;
+  margin-top: 10%;
+  font-weight: lighter;
+  font-size: 2em;
+}
 /*Content*/
 
 /*Footer*/
 footer{
-  height: 400px;
-  overflow: hidden;
+  display: block;
   background-color: #3399ff;
   box-shadow: inset 0px 6px 9.4px 0.6px rgba(1, 1, 1, 0.43);
 }

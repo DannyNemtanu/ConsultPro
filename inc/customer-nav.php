@@ -26,7 +26,7 @@
             <li><a href="#">Log Out</a></li>
           </ul>
         </li>
-        <li><button href="#" type="button" class="btn btn-primary nav-sign" data-toggle="modal" data-target=".signup" >Sign Up</button></li>
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
