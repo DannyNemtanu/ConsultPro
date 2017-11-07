@@ -20,7 +20,8 @@
           <div class="form-footer">
             <button type="submit" id="submit-btn" class="btn btn-primary header-inf-btn">LOG IN</button><br>
             <span>Don't have an account yet?</span><br>
-            <span><a id="color-red" href="#">SIGN UP</a></span><br>
+            <span><a id="color-red" href="#" data-toggle="modal" data-target=".signup">SIGN UP</a></span><br>
+
           </div>
         </form>
       </div>

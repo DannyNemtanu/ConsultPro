@@ -1,45 +1,58 @@
 <!-- Footer -->
-<footer>
-  <div class="row container">
-      <div class="col-md-6">
-        <h3>SIGN UP TO <span id="bold">NEWSLETTER</span></h3>
-        <span><p>Keep up to date with lattest news & offer.s</p></span>
-        <input id="footer-newsletter" type="email" name="newsletter-email" value="" placeholder="email@example.com">
-      </div>
-      <div class="col-md-6">
-        <h3>FOLLOW <span id="bold">US</span></h3>
+<footer id="myFooter">
+    <div class="container">
         <div class="row">
-          <ul id="social-links">
-            <li><a href="#"><img src="../img/linkedin.png" alt="LinkedIn"></a></li>
-            <li><a href="#"><img src="../img/facebook.png" alt="Facebook"></a></li>
-            <li><a href="#"><img src="../img/instagram.png" alt="Instagram"></a></li>
-            <li><a href="#"><img src="../img/twitter.png" alt="Twitter"></a></li>
-          </ul>
+            <div class="col-sm-3">
+                <h2 class="logo"><a href="#"> LOGO </a></h2>
+            </div>
+            <div class="col-sm-2">
+                <h5>Get started</h5>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sign up</a></li>
+                    <li><a href="#">Downloads</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <h5>About us</h5>
+                <ul>
+                    <li><a href="#">Company Information</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <h5>Support</h5>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help desk</a></li>
+                    <li><a href="#">Forums</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <div class="social-networks">
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                </div>
+                <button type="button" class="btn btn-default">Contact us</button>
+            </div>
         </div>
-      </div>
-      <div class="row footer-nav">
-        <ul>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">NEWS</a></li>
-          <li><a href="#">BLOG</a></li>
-          <li><a href="#">EXPLORE</a></li>
-          <li><a href="#">CONSULTANTS</a></li>
-        </ul>
-      </div>
-  </div>
-  <div class="row copyright">
-    <p>Published in 2017. Copyright ProConsult. All Right Reserved.</p>
-  </div>
+    </div>
+    <div class="footer-copyright">
+        <p>© 2017 eKonsult. All Rights Reserved. </p>
+    </div>
 </footer>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.js"></script>
-    <script src="js/main.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-auth.js"></script>
+
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js" charset="utf-8"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
