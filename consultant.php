@@ -46,7 +46,9 @@
           <div class="col-xs-12 section-content">
             <div class="row pull-right edit">
               <div class="col-xs-1">
-                <img src="img/edit.png" alt="Edit">
+                  <button type="button" class="btn btn-edit" data-toggle="modal" data-target="#descriptionModal" >
+                    <img src="img/edit.png" alt="Edit">
+                  </button>
               </div>
             </div>
             <div class="col-md-3 hidden-xs">
@@ -70,7 +72,9 @@
           <div class="col-xs-12 section-content">
             <div class="row push-right edit">
               <div class="col-xs-1">
-                <img src="img/edit.png" alt="Edit">
+                  <button type="button" class="btn btn-edit" data-toggle="modal" data-target="#jobModal" >
+                    <img src="img/edit.png" alt="Edit">
+                  </button>
               </div>
             </div>
             <div class="col-md-3 hidden-xs">
@@ -100,7 +104,9 @@
             <div class="col-xs-12 section-content">
               <div class="row push-right edit">
                 <div class="col-xs-1">
-                  <img src="img/edit.png" alt="Edit">
+                  <button type="button" class="btn btn-edit" data-toggle="modal" data-target="#educationModal" >
+                    <img src="img/edit.png" alt="Edit">
+                  </button>
                 </div>
               </div>
               <div class="col-md-3 hidden-xs">
@@ -115,11 +121,6 @@
           </div>
           <div class="row">
             <div class="col-xs-12 section-content">
-              <div class="row push-right edit">
-                <div class="col-xs-1">
-                  <img src="img/edit.png" alt="Edit">
-                </div>
-              </div>
               <div class="col-md-3 hidden-xs">
                 <img src="img/consEducation.png" alt="College Image">
               </div>
@@ -139,7 +140,9 @@
             <div class="col-xs-12 section-content">
               <div class="row push-right edit">
                 <div class="col-xs-1">
-                  <img src="img/edit.png" alt="Edit">
+                  <button type="button" class="btn btn-edit" data-toggle="modal" data-target="#certsModal" >
+                    <img src="img/edit.png" alt="Edit">
+                  </button>
                 </div>
               </div>
               <div class="col-md-3 hidden-xs">
@@ -154,11 +157,6 @@
           </div>
           <div class="row">
             <div class="col-xs-12 section-content">
-              <div class="row push-right edit">
-                <div class="col-xs-1">
-                  <img src="img/edit.png" alt="Edit">
-                </div>
-              </div>
               <div class="col-md-3 hidden-xs">
                 <img src="img/consCertificate.png" alt="Certificate Image">
               </div>
@@ -249,8 +247,207 @@
       <h1 id="big-text">CONTACT <span id="bold">CONSULTANT</span> NOW</h1>
     </div>
     <div class="col-xs-4">
-      <button type="button" name="button" class="contact-btn btn btn-primary">CONTACT NOW!</button>
+      <button type="button" name="button" class="contact-btn btn btn-primary" data-toggle="modal" data-target="#contactModal">CONTACT NOW!</button>
+    </div>
+  </div>
 
+
+
+  <!--Description Modal -->
+  <div class="modal fade" id="descriptionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLabel">Description</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form role="form" method="POST" action="" name="description">
+                    <div class="form-group">
+                        <label class="control-label">Profile Description</label>
+                        <div>
+                            <textarea name="description" class="form-control input-lg" placeholder="Profile Description Goes Here..." rows="8" max-cols="80"></textarea>
+                        </div>
+                    </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Job Modal -->
+  <div class="modal fade" id="jobModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLabel">Job Expirience</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form role="form" method="POST" action="" name="jobForm">
+                    <div class="form-group">
+                        <label class="control-label">Company Name</label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="cName" value="" placeholder="Company Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Date</label>
+                        <div>
+                            <input type="date" class="form-control input-lg" name="cDate" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Location</label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="cLocation" value="" placeholder="Location">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Description</label>
+                        <div>
+                            <textarea class="form-control input-lg" name="description" rows="8" cols="80"></textarea>
+                        </div>
+                    </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Education Modal -->
+  <div class="modal fade" id="educationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLabel">Education</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form role="form" method="POST" action="" name="educationForm">
+                    <div class="form-group">
+                        <label class="control-label">Institute Name</label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="iName" value="" placeholder="ex. National College of Ireland">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Degree</label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="iDegree" value="" placeholder="ex. BSc in Computing">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label class="control-label">Date Started</label>
+                          <div>
+                              <input type="date" class="form-control input-lg" name="iDateStart" value="">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="control-label">Date End</label>
+                          <div>
+                              <input type="date" class="form-control input-lg" name="iDateEnd" value="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Certs Modal -->
+  <div class="modal fade" id="certsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLabel">Certifications</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form role="form" method="POST" action="" name="educationForm">
+                    <div class="form-group">
+                        <label class="control-label">Qualification</label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="iName" value="" placeholder="ex. ACCA QUALIFICATION">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Course Title</label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="iDegree" value="" placeholder="ex. PROFESSIONAL LEVEL CERTIFICATE">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label class="control-label">Date Started</label>
+                          <div>
+                              <input type="date" class="form-control input-lg" name="qDateStart" value="">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="control-label">Date End</label>
+                          <div>
+                              <input type="date" class="form-control input-lg" name="qDateEnd" value="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLabel">Contact Consultant</h1>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+              <label class="control-label">E-mail:</label>
+              <label class="control-label"><a href="mailto:eamil@example.com">eamil@example.com</a></label>
+          </div>
+          <div class="form-group">
+              <label class="control-label">Cit:</label>
+              <label class="control-label">Dublin, IE</label>
+          </div>
+          <div class="form-group">
+              <label class="control-label">Contact Phone:</label>
+              <label class="control-label">+353 (87) 555 - 5555</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
   </div>
 

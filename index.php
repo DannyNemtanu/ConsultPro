@@ -12,13 +12,13 @@
            <button type="button" class="btn btn-primary header-inf-btn">EXPLORE NOW</button>
       </div>
       <div class="row header-form">
-        <form class="home-form" action="index.html" method="post">
+        <form class="home-form" method="post" id="header-login-form">
           <label for="username">Username</label><br>
-          <input type="text" name="username" id="username" placeholder="Username"><br>
-          <label for="username">Password</label><br>
+          <input type="text" name="email" id="email" placeholder="Email Address"><br>
+          <label for="password">Password</label><br>
           <input type="password" name="pass"  id="pass" placeholder="Password">
           <div class="form-footer">
-            <button type="submit" id="submit-btn" class="btn btn-primary header-inf-btn">LOG IN</button><br>
+            <button id="submit-btn" type="submit" class="btn btn-primary header-inf-btn">LOG IN</button><br>
             <span>Don't have an account yet?</span><br>
             <span><a id="color-red" href="#" data-toggle="modal" data-target=".signup">SIGN UP</a></span><br>
 

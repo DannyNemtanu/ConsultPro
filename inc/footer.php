@@ -45,14 +45,7 @@
 </footer>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-
-    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-app.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js" charset="utf-8"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="text/JavaScript"></script>
   </body>
 </html>

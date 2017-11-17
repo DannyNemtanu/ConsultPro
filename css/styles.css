@@ -223,6 +223,7 @@ label{
   font-weight: normal;
 }
 
+
 /*Consultant Left Side*/
 .consultant-raling{
   background-color: #f5f5f5;
@@ -266,14 +267,20 @@ label{
 }
 .edit{
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 0;
+  top: 0;
   z-index: 1;
 }
 .edit>div img{
   cursor: pointer;
-  width: 60%;
+  width: 100%;
+}
+.btn-edit{
   position: absolute;
+  width: 45px;
+  background: none;
+  left: 0;
+  outline:none;
 }
 .desc-btn{
   width: 100%;
