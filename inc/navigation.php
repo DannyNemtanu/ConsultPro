@@ -31,32 +31,13 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-
-<?php
-  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-      if ($_POST['pass'] == $_POST['cpass']) {
-        $username = $mysqli->real_escape_string($_POST['username']);
-        $email = $mysqli->real_escape_string($_POST['email']);
-        $pass = md5($_POST['pass']);
-
-        $sql = "INSERT INTO customer_user (username,email,password) VALUES ('$username','$email','$pass')";
-
-        // If querry is successfull redirect to customer page
-        if ($mysqli->query($sql) == true) {
-          $_SESSION['message'] = 'Registration successfully!';
-          header("location: customer.php");
-        }
-      }
-  }
- ?>
 <!-- Sign Up Modal Form -->
-<div class="modal fade bs-example-modal-sm signup" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+<div class="modal fade signup-modal bs-example-modal-sm signup" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg nav-sign-modal" role="document">
-      <form method="post" action="index.php" autocomplete="off" id="signup-form">
+      <form method="post" action="index.php" autocomplete="on" id="signup-form">
         <div id="login-box">
           <div class="left">
             <h1>Sign up</h1>
-            <input type="text" id="left-first-child registerUsername" name="username" placeholder="Username"/>
             <input type="text" id="registerEmail" name="email" placeholder="E-mail"/>
             <input type="password" id="registerPass" name="pass" placeholder="Password"/>
             <input type="password" id="registerCPass" name="cpass" placeholder="Retype password"/>

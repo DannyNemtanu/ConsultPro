@@ -49,7 +49,6 @@
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-messaging.js"></script>
-
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>

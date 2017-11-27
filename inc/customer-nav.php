@@ -18,12 +18,12 @@
         <li><a href="consultant.php">Explore</a></li>
         <li><a href="customer.php">Customer</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome Name Surname! <span class="caret"></span></a>
+          <a href="#" id="user-welcome" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome Name Surname! <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Profile</a></li>
             <li><a href="#">Settings</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Log Out</a></li>
+            <li><a href="#" id="user-logout">Log Out</a></li>
           </ul>
         </li>
       </ul>

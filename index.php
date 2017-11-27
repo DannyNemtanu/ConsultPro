@@ -1,4 +1,3 @@
-<!-- Include Header -->
 <?php include 'inc/header.php'; ?>
 <!-- Including Navigation -->
 <?php  include 'inc/navigation.php'; ?>
@@ -14,14 +13,13 @@
       <div class="row header-form">
         <form class="home-form" method="post" id="header-login-form">
           <label for="username">Username</label><br>
-          <input type="text" name="email" id="email" placeholder="Email Address"><br>
+          <input type="text" name="email" id="loginEmail" placeholder="Email Address"><br>
           <label for="password">Password</label><br>
-          <input type="password" name="pass"  id="pass" placeholder="Password">
+          <input type="password" name="pass"  id="loginPass" placeholder="Password">
           <div class="form-footer">
             <button id="submit-btn" type="submit" class="btn btn-primary header-inf-btn">LOG IN</button><br>
             <span>Don't have an account yet?</span><br>
             <span><a id="color-red" href="#" data-toggle="modal" data-target=".signup">SIGN UP</a></span><br>
-
           </div>
         </form>
       </div>
