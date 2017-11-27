@@ -19,4 +19,3 @@
     <![endif]-->
   </head>
   <body>
-    <?php include 'inc/connection.php'; ?>

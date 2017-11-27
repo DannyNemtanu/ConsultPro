@@ -52,14 +52,14 @@
 <!-- Sign Up Modal Form -->
 <div class="modal fade bs-example-modal-sm signup" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg nav-sign-modal" role="document">
-      <form method="post" action="index.php" autocomplete="off" id="modal-form">
+      <form method="post" action="index.php" autocomplete="off" id="signup-form">
         <div id="login-box">
           <div class="left">
             <h1>Sign up</h1>
-            <input type="text" id="left-first-child" name="username" placeholder="Username"/>
-            <input type="text" name="email" placeholder="E-mail"/>
-            <input type="password" name="pass" placeholder="Password"/>
-            <input type="password" name="cpass" placeholder="Retype password"/>
+            <input type="text" id="left-first-child registerUsername" name="username" placeholder="Username"/>
+            <input type="text" id="registerEmail" name="email" placeholder="E-mail"/>
+            <input type="password" id="registerPass" name="pass" placeholder="Password"/>
+            <input type="password" id="registerCPass" name="cpass" placeholder="Retype password"/>
             <p id="error"></p>
             <input type="submit" name="signup_submit" value="Sign me up" />
           </div>
