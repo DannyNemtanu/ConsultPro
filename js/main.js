@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   // Initialize Firebase
   var config = {
@@ -16,7 +17,6 @@ $(document).ready(function(){
   var Auth = firebase.auth();
   var dbRef = firebase.database();
   var contactsRef = dbRef.ref("customer");
-  var usersRef = dbRef.ref('users');
   var auth = null;
 
   //Register
@@ -35,25 +35,46 @@ $(document).ready(function(){
         firebase.auth().createUserWithEmailAndPassword(data.email, passwords.password).then(function(user){
             //now user is needed to be logged in to save data
             $('.signup-modal').modal('toggle');
-            console.log("Authenticated successfully with payload:", user);
+            console.log("Authenticated successfully:", user);
             auth = user;
             console.log("Signed In successfully!", user);
-            var url = "http://proconsult:1111/customer.php";
-            $(location).attr("href", url);
-            //now saving the profile data
-            usersRef
-              .child(user.uid)
-              .set(data)
-              .then(function(){
-                console.log("User Information Saved:", user.uid);
-              });
-            });
-          }else {
-            //password and confirm password didn't match
-            alert("Passwords didn't match!");
-          }
-        }
-      });
+
+            //Check what type of sign up
+            if ($("#customer-signup").click) {
+              var usersRef = dbRef.ref('customer');
+              alert("Customer Sign Up");
+              //now saving the profile data
+              usersRef
+                .child(user.uid)
+                .set(data)
+                .then(function(){
+                  console.log("User Information Saved:", user.uid);
+                });
+                var url = "http://proconsult:1111/customer.php";
+                $(location).attr("href", url);
+            }
+            if ($("#consultant-signup").click) {
+              alert("Consutltant Sign Up");
+              var usersRef = dbRef.ref('customer');
+              $(location).attr("href", url);
+              //now saving the profile data
+              usersRef
+                .child(user.uid)
+                .set(data)q
+                .then(function(){
+                  console.log("User Information Saved:", user.uid);
+                });
+                var url = "http://proconsult:1111/consultant.php";
+            }
+          }).catch(error => {$("#signup-error").text(error.message)});
+    }else {
+      //password and confirm password didn't match
+      $("#signup-error").text("Passwords doesn't match!");
+    }}
+    else{
+      $("#signup-error").text("Please fill all the fields!");
+    }
+});
 
 
 // login
@@ -70,12 +91,14 @@ $("#header-login-form").on('submit',function(e){
       console.log("Signed In successfully!", user);
       var url = "http://proconsult:1111/customer.php";
       $(location).attr("href", url);
-    });
+    }).catch(error => {alert(error.message)});
   }
   else{
     console.log("Please Fill The Blanks!");
   }
 });
+
+//Log out
 $("#user-logout").on("click",function(e){
   e.preventDefault();
   firebase.auth().signOut().then(function(user) {
@@ -102,7 +125,10 @@ firebase.auth().onAuthStateChanged(function(user) {
     console.log(email);
     $("#user-welcome").text("Welcome! " + email);
   } else {
-
+    if (window.location != 'http://proconsult:1111/index.php') {
+      window.location = 'http://proconsult:1111/index.php';
+      alert("Please Login First!");
+    }
   }
 });
 });

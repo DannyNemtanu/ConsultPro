@@ -14,17 +14,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="consultant.php">Consultant</a></li>
-        <li><a href="customer.php">Customer</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Settings</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Log Out</a></li>
-          </ul>
-        </li>
+        <li><a href="consultant.php">Explore</a></li>
         <li><button href="#" type="button" class="btn btn-primary nav-sign" data-toggle="modal" data-target=".signup" >Sign Up</button></li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -38,11 +28,19 @@
         <div id="login-box">
           <div class="left">
             <h1>Sign up</h1>
+            <p style="color:red" id="signup-error"></p>
             <input type="text" id="registerEmail" name="email" placeholder="E-mail"/>
             <input type="password" id="registerPass" name="pass" placeholder="Password"/>
             <input type="password" id="registerCPass" name="cpass" placeholder="Retype password"/>
-            <p id="error"></p>
-            <input type="submit" name="signup_submit" value="Sign me up" />
+            <div class="row">
+              <div class="col-md-6">
+                <input id="customer-signup" type="submit" name="signup_submit" value="Customer" />
+              </div>
+              <div class="col-md-6">
+                <input id="consultant-signup" type="submit" name="signup_submit" value="Consultant" />
+              </div>
+            </div>
+
           </div>
 
           <div class="right">
@@ -116,9 +114,9 @@ transition: 0.2s ease;
 }
 
 #login-box input[type="submit"] {
+margin-left: -10px;
 margin-top: 28px;
-width: 120px;
-height: 32px;
+padding: 10px;
 background: #16a085;
 border: none;
 border-radius: 2px;
