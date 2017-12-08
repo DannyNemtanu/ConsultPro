@@ -1,0 +1,444 @@
+/*Global General Style*/
+*{
+  font-family: "Lato" !important;
+}
+li{
+  display: inline-block;
+}
+#big-text{
+  font-size: 4em;
+}
+#color-red{
+  color:#ff3333;
+}
+#bold{
+  font-weight: bold;
+}
+#no-margin{
+  margin: 0;
+}
+.no-border{
+  border: none;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: 300;
+}
+.title{text-align: center;}
+
+/*Navigation*/
+nav .dropdown-menu li{
+  width: 100%;
+}
+.navbar{
+  border:none;
+  margin: 0;
+}
+.navbar-default{
+  background-color: rgba(0, 0, 0, 0) ;
+  border-color: rgba(0, 0, 0, 0) ;
+}
+
+.nav-sign{
+  border:none;
+  margin-top: 10%;
+}
+
+.customer-nav .dropdown-menu li{
+  width: 100%;
+}
+
+/*Header Banner*/
+.header-banner{
+  height: 550px;
+  margin: 0;
+  background-image: url("../img/HomeBanner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:#f5f5f5;
+  padding: 5% 10%;
+}
+.header-info,.header-form{
+  width: 40%;
+  height: 100%;
+  margin: 0;
+  padding: 0% 1%;
+  float: left;
+}
+
+.header-info h1, .header-banner p{
+  font-size: 1.2em;
+  font-weight: 300;
+  text-align: right;
+}
+
+.header-info h1{
+  font-size: 3em !important;
+}
+
+.header-inf-btn {
+  border-radius: 10px;
+  background-color: rgba(81, 124, 253, 0.7);
+  box-shadow: 0px 0px 30.45px 4.55px rgba(0, 0, 0, 0.91);
+  width: 50%;
+  height: 60px;
+  float: right;
+  margin-top: 10px;
+  border: none;
+}
+.home-form .header-inf-btn{
+  margin-top: 20px;
+  box-shadow: none;
+  float: none;
+}
+
+.home-form{
+  width: 90%;
+  height: auto;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 30.45px 4.55px rgba(0, 0, 0, 0.91);
+  float: left;
+  color: #333;
+  padding: 5%;
+}
+.form-footer{
+  text-align: center;
+}
+.home-form input{
+  width: 100%;
+  border-radius: 10px;
+  height: 50px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #333;
+}
+label{
+  font-size: 16px;
+  margin-top: 20px;
+  font-weight: 300;
+  font-family: "Lato";
+}
+
+/*Content*/
+
+.content{
+  text-align: center;
+  padding: 20px 0%;
+  width: 100%;
+  background-image: url('../img/contentBg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.content .row{
+  text-align: center;
+}
+.explanation img{
+  width: 45% !important;
+}
+.content .explanation{
+  margin-top: 20px;
+}
+.explanation p{
+  width: 250px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/*Testimoniasl*/
+.testimonials{
+  padding: 50px;
+  text-align: center;
+  color: #efefef;
+  background-image: url("../img/testimonialsBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.testimonials p{
+  margin: 30px 0px;
+  font-weight: lighter;
+  font-style: italic;
+}
+/*Home Page End*/
+
+/*Consultant Page*/
+/*Header*/
+.consultant-content, .customer-content{
+  background-color: #f5f5f5;
+  padding: 40px;
+}
+.consultant-banner{
+  background-image: url('../img/consultantHeaderBg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  color:#f5f5f5;
+  text-align: left;
+}
+.cons-banner-left{
+  text-align: center;
+}
+.cons-desc{
+  margin-top: 10%;
+}
+.cons-desc h1{
+  text-align: center;
+}
+.consultant-banner img{
+  width: 180px;
+}
+
+/*Cosnultant Left Side*/
+.dashboard{
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 20px;
+}
+.dashboard .text{
+  margin-left: 20px;
+}
+.dashboard .dash-info{
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+.dashboard .dash-info h1{
+  color: #438eff;
+  font-size: 3em;
+}
+.consultant-main{
+  background-color: #fff;
+  padding: 40px;
+}
+.section-content{
+  margin-top: 20px;
+}
+
+.section-content>div>img{
+  width: 50%;
+  margin: 5% 25%;
+}
+.section-content h1{
+  font-size: 1.5em;
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+
+/*Consultant Left Side*/
+.consultant-raling{
+  background-color: #f5f5f5;
+}
+.consultant-raling-padding{
+  background-color: #fff;
+  padding: 40px 10px;
+  height: 100%;
+}
+.consultant-suugested>div{
+  padding: 20px 0px;
+  border-bottom: 1px solid #ccc;
+}
+.consultant-suugested>div:last-child{
+  border:none;
+}
+.consultant-suugested h1,h2,h3,h4,h5,h6{
+  margin: 5px;
+}
+.consultant-suugested img{
+  width: 85%;
+  border-radius: 50%;
+  margin: 5%;
+  text-align: center;
+}
+.suggested-btn{
+  background:none;
+  color: #438eff;
+  text-align: center;
+  width: 100%;
+}
+.share .row a img{
+  padding: 30px 0px;
+}
+.share img{
+  width:100%;
+  padding: 5px;
+}
+.section-content{
+  position: relative;
+}
+.edit{
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.edit>div img{
+  cursor: pointer;
+  width: 100%;
+}
+.btn-edit{
+  position: absolute;
+  width: 45px;
+  background: none;
+  left: 0;
+  outline:none;
+}
+.desc-btn{
+  width: 100%;
+  text-align: center;
+}
+.desc-btn button{
+  background: none;
+  color: #333;
+}
+.contact-bn{
+  padding: 40px;
+  background-image: url('../img/consContactBg.jpg');
+  color:#f5f5f5;
+}
+.contact-btn{
+  background-color: rgba(22, 115, 255, 0.61);
+  padding: 20px;
+  margin-top: 10%;
+  font-weight: lighter;
+  font-size: 2em;
+}
+/*Content*/
+/*End Consultant*/
+
+/*Customer Page*/
+  .cutomer-btn{
+    margin-top: 30px;
+  }
+
+/*End Customer Page*/
+.customer-recomended-consultants{
+  text-align: center;
+  margin-top: 30px;
+}
+.customer-recomended-consultants img{
+  width: 60%;
+  margin: 0 auto;
+}
+.customer-recomended-consultants>div{
+  padding: 5px;
+}
+.receomended-btn{
+  margin-top: 6px;
+  background: none;
+  color: #286090;
+}
+/*Footer*/
+#myFooter {
+    background-color: #3c3d41;
+    color: white;
+    padding-top: 30px;
+}
+#myFooter li{
+  width: 100%;
+}
+
+#myFooter .footer-copyright {
+    background-color: #333333;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+#myFooter .row {
+    margin-bottom: 60px;
+}
+
+#myFooter .navbar-brand {
+    margin-top: 45px;
+    height: 65px;
+}
+
+#myFooter .footer-copyright p {
+    margin: 10px;
+    color: #ccc;
+}
+
+#myFooter ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+}
+
+#myFooter h5 {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#myFooter h2 a{
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+#myFooter a {
+    color: #d2d1d1;
+    text-decoration: none;
+}
+
+#myFooter a:hover,
+#myFooter a:focus {
+    text-decoration: none;
+    color: white;
+}
+
+#myFooter .social-networks {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 16px;
+}
+
+#myFooter .social-networks a {
+    font-size: 32px;
+    color: #f9f9f9;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+#myFooter .social-networks a:hover {
+    text-decoration: none;
+}
+
+#myFooter .facebook:hover {
+    color: #0077e2;
+}
+
+#myFooter .google:hover {
+    color: #ef1a1a;
+}
+
+#myFooter .twitter:hover {
+    color: #00aced;
+}
+
+#myFooter .btn {
+    color: white;
+    background-color: #d84b6b;
+    border-radius: 20px;
+    border: none;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    line-height: 25px;
+}
+
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+}
+
+
+/* CSS used for positioning the footers at the bottom of the page. */
+/* You can remove this. */
+#myFooter{
+   flex: 0 0 auto;
+   -webkit-flex: 0 0 auto;
+}
