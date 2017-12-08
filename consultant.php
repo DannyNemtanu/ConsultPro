@@ -27,15 +27,12 @@
           </div>
           <div class="row dash-info">
             <div class="col-md-4">
-              <h1>13</h1>
               <h4>Who viewed you account</h4>
             </div>
             <div class="col-md-4">
-              <h1>0</h1>
               <h4>Feedbacks to your account</h4>
             </div>
             <div class="col-md-4">
-              <h1>13</h1>
               <h4>Search appearance</h4>
             </div>
           </div>

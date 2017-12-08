@@ -37,7 +37,7 @@
                   <h1>2</h1>
                   <h4>Feedback Given</h4>
                 </div>
-                <a href="Consultant.php">
+                <a href="ratedconsultants.php">
                   <div class="col-md-4">
                     <h1>13</h1>
                     <h4>Rated Consultants</h4>
@@ -47,62 +47,104 @@
         </div>
         <!-- End Dashborrd -->
 
-      <!-- Main Customer -->
-      <div class="row cutomer-btn">
-        <div class="col-md-12">
-          <div class="col-md-4">
-            <button type="button" name="button" class="btn btn-primary btn-lg btn-block">1</button>
-          </div>
-          <div class="col-md-4">
-            <button type="button" name="button" class="btn btn-success btn-lg btn-block">2</button>
-          </div>
-          <div class="col-md-4">
-            <button type="button" name="button" class="btn btn-danger btn-lg btn-block">3</button>
-          </div>
-        </div>
-      </div>
+
       <!-- Recomended Consultants -->
-      <div class="row customer-recomended-consultants">
-        <div class="col-md-3">
-            <a href="#"><img src="img/consultant.png" class="img-responsive" alt="">
-            <h5>Name Surname</h5></a>
-        </div>
-        <div class="col-md-3">
-            <a href="#"><img src="img/consultant.png" class="img-responsive" alt="">
-            <h5>Name Surname</h5></a>
-        </div>
-        <div class="col-md-3">
-            <a href="#"><img src="img/consultant.png" class="img-responsive" alt="">
-            <h5>Name Surname</h5></a>
-        </div>
-        <div class="col-md-3">
-            <a href="#"><img src="img/consultant.png" class="img-responsive" alt="">
-            <h5>Name Surname</h5></a>
-        </div>
-        <div class="col-md-3">
-            <a href="#"><img src="img/consultant.png" class="img-responsive" alt="">
-            <h5>Name Surname</h5></a>
-        </div>
-        <div class="col-md-3">
-            <a href="#"><img src="img/consultant.png" class="img-responsive" alt="">
-            <h5>Name Surname</h5></a>
-        </div>
-        <div class="col-md-3">
-            <a href="#"><img src="img/consultant.png" class="img-responsive" alt="">
-            <h5>Name Surname</h5></a>
-        </div>
-        <div class="col-md-3">
-            <a href="#"><img src="img/consultant.png" class="img-responsive" alt="">
-            <h5>Name Surname</h5></a>
-        </div>
-      </div>
+
+      <style>
+      html {
+        box-sizing: border-box;
+      }
+
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+
+      .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
+
+      @media (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .title {
+        color: grey;
+      }
+
+      .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .button:hover {
+        background-color: #555;
+      }
+      </style>
+
       <div class="row">
-        <div class="col-md-12">
-          <button type="button" class="btn btn-primary receomended-btn btn-block" name="button">Check More Recomended</button>
+        <div class="column">
+          <div class="card">
+            <img src="/img/team1.jpg" style="width:100%">
+            <div class="container">
+              <h2>Jane Doe</h2>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="/img/team2.jpg" style="width:100%">
+            <div class="container">
+              <h2>Mike Ross</h2>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <img src="/img/team3.jpg" style="width:100%">
+            <div class="container">
+              <h2>John Doe</h2>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+            </div>
+          </div>
         </div>
       </div>
+
+
+
       <!-- Recomended Consultants -->
-      <!-- End Main Customer -->
     </div>
     <!-- Right Side -->
     <div class="consultant-raling hidden-xs col-md-4">
@@ -128,7 +170,7 @@
         <!-- Suggestions -->
         <div class="row suggestions">
           <div class="col-md-12">
-            <h3>Saved Consultants</h3>
+            <h3>Recommended Consultants</h3>
             <!-- Conntected Consultants List -->
             <div class="row consultant-suugested">
               <div class="row">

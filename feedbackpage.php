@@ -37,7 +37,7 @@
                   <h1>2</h1>
                   <h4>Feedback Given</h4>
                 </div>
-                <a href="Consultant.php">
+                <a href="ratedconsultants.php">
                   <div class="col-md-4">
                     <h1>13</h1>
                     <h4>Rated Consultants</h4>
@@ -47,62 +47,54 @@
         </div>
         <!-- End Dashborrd -->
 
-      <!-- Main Customer -->
-      <div class="row cutomer-btn">
-        <div class="col-md-12">
-          <div class="col-md-4">
-            <button type="button" name="button" class="btn btn-primary btn-lg btn-block">1</button>
-          </div>
-          <div class="col-md-4">
-            <button type="button" name="button" class="btn btn-success btn-lg btn-block">2</button>
-          </div>
-          <div class="col-md-4">
-            <button type="button" name="button" class="btn btn-danger btn-lg btn-block">3</button>
-          </div>
-        </div>
-      </div>
+
       <!-- Recomended Consultants -->
-      <div class="row customer-recomended-consultants">
-        <div class="col-md-3">
-            <a href="#"><img src="img/consultant.png" class="img-responsive" alt="">
-            <h5>Name Surname</h5></a>
-        </div>
-        <div class="col-md-3">
-            <a href="#"><img src="img/consultant.png" class="img-responsive" alt="">
-            <h5>Name Surname</h5></a>
-        </div>
-        <div class="col-md-3">
-            <a href="#"><img src="img/consultant.png" class="img-responsive" alt="">
-            <h5>Name Surname</h5></a>
-        </div>
-        <div class="col-md-3">
-            <a href="#"><img src="img/consultant.png" class="img-responsive" alt="">
-            <h5>Name Surname</h5></a>
-        </div>
-        <div class="col-md-3">
-            <a href="#"><img src="img/consultant.png" class="img-responsive" alt="">
-            <h5>Name Surname</h5></a>
-        </div>
-        <div class="col-md-3">
-            <a href="#"><img src="img/consultant.png" class="img-responsive" alt="">
-            <h5>Name Surname</h5></a>
-        </div>
-        <div class="col-md-3">
-            <a href="#"><img src="img/consultant.png" class="img-responsive" alt="">
-            <h5>Name Surname</h5></a>
-        </div>
-        <div class="col-md-3">
-            <a href="#"><img src="img/consultant.png" class="img-responsive" alt="">
-            <h5>Name Surname</h5></a>
-        </div>
-      </div>
+      <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <button type="button" class="btn btn-primary receomended-btn btn-block" name="button">Check More Recomended</button>
-        </div>
+      <div class="col-sm-12">
+      <h3>Consultant Feedback Given</h3>
+      </div><!-- /col-sm-12 -->
+      </div><!-- /row -->
+      <div class="row">
+      <div class="col-sm-1">
+      <div class="thumbnail">
+      <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+      </div><!-- /thumbnail -->
+      </div><!-- /col-sm-1 -->
+
+      <div class="col-sm-5">
+      <div class="panel panel-default">
+      <div class="panel-heading">
+      <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
       </div>
+      <div class="panel-body">
+      Panel content
+      </div><!-- /panel-body -->
+      </div><!-- /panel panel-default -->
+      </div><!-- /col-sm-5 -->
+
+      <div class="col-sm-1">
+      <div class="thumbnail">
+      <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+      </div><!-- /thumbnail -->
+      </div><!-- /col-sm-1 -->
+
+      <div class="col-sm-5">
+      <div class="panel panel-default">
+      <div class="panel-heading">
+      <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
+      </div>
+      <div class="panel-body">
+      Panel content
+      </div><!-- /panel-body -->
+      </div><!-- /panel panel-default -->
+      </div><!-- /col-sm-5 -->
+      </div><!-- /row -->
+
+      </div><!-- /container -->
+
+
       <!-- Recomended Consultants -->
-      <!-- End Main Customer -->
     </div>
     <!-- Right Side -->
     <div class="consultant-raling hidden-xs col-md-4">
@@ -128,7 +120,7 @@
         <!-- Suggestions -->
         <div class="row suggestions">
           <div class="col-md-12">
-            <h3>Saved Consultants</h3>
+            <h3>Recommended Consultants</h3>
             <!-- Conntected Consultants List -->
             <div class="row consultant-suugested">
               <div class="row">
