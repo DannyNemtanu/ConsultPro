@@ -44,7 +44,7 @@ $('#signup-customer').on('submit', function (e) {
             usersRef.child(user.uid).set(data).then(function(){
                 console.log("User Information Saved:", user.uid);
             //redirecting
-            var url = "http://proconsult:1111/customer.php";
+            var url = "/consultPro/customer.php";
             $(location).attr("href", url);
               });
             });
@@ -81,7 +81,7 @@ $('#signup-consultant').on('submit', function (e) {
               usersRef.child(user.uid).set(data).then(function(){
                   console.log("User Information Saved:", user.uid);
                   //redirecting
-                  var url = "http://proconsult:1111/consultant.php";
+                  var url = "/consultPro/consultant.php";
                   $(location).attr("href", url);
                 });
               });
@@ -110,10 +110,10 @@ $("#header-login-form").on('submit',function(e){
       typeRef.on("value", function(snapshot) {
           var type = snapshot.val();
           if (type == null) {
-            var url = "http://proconsult:1111/consultant.php?uid="+user.uid;
+            var url = "/consultPro/consultant.php?uid="+user.uid;
             $(location).attr("href", url);
           }else{
-            var url = "http://proconsult:1111/customer.php?uid="+user.uid;
+            var url = "/consultPro/customer.php?uid="+user.uid;
             $(location).attr("href", url);
             console.log(type);
           }
@@ -132,7 +132,7 @@ $("#user-logout").on("click",function(e){
   e.preventDefault();
   firebase.auth().signOut().then(function(user) {
   // Sign-out successful.
-  var url = "http://proconsult:1111/";
+  var url = "/consultPro/index.php";
   $(location).attr("href", url);
   }, function(error) {
     console.log("An error happened! : "+error);
