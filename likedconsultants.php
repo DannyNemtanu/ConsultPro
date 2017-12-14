@@ -126,7 +126,7 @@
 
         <div class="column">
           <div class="card">
-            <img src="/img/team2.jpg" style="width:100%">
+            <img src="/img/suits.jpg" style="width:100%">
             <div class="container">
               <h2>Mike Ross</h2>
               <p>Some text that describes me lorem ipsum ipsum lorem.</p>
