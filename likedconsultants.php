@@ -26,9 +26,13 @@
             <h4>Private to you !</h4>
           </div>
           <div class="row dash-info">
+            <a href="customer.php">
+              <div class="col-md-4">
+                <h2>Profile</h2>
+              </div>
             <a href="likedconsultants.php">
               <div class="col-md-4">
-                <h1>13</h1>
+                <h1>3</h1>
                 <h4>Liked Consultants</h4>
               </div>
             </a>

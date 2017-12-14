@@ -28,7 +28,7 @@
           <div class="row dash-info">
             <a href="likedconsultants.php">
               <div class="col-md-4">
-                <h1>13</h1>
+                <h1>3</h1>
                 <h4>Liked Consultants</h4>
               </div>
             </a>
@@ -37,7 +37,7 @@
                   <h1>2</h1>
                   <h4>Feedback Given</h4>
                 </div>
-                <a href="Consultant.php">
+                <a href="ratedconsultants.php">
                   <div class="col-md-4">
                     <h1>13</h1>
                     <h4>Rated Consultants</h4>
@@ -47,20 +47,8 @@
         </div>
         <!-- End Dashborrd -->
 
-      <!-- Main Customer -->
-      <div class="row cutomer-btn">
-        <div class="col-md-12">
-          <div class="col-md-4">
-            <button type="button" name="button" class="btn btn-primary btn-lg btn-block">1</button>
-          </div>
-          <div class="col-md-4">
-            <button type="button" name="button" class="btn btn-success btn-lg btn-block">2</button>
-          </div>
-          <div class="col-md-4">
-            <button type="button" name="button" class="btn btn-danger btn-lg btn-block">3</button>
-          </div>
-        </div>
-      </div>
+
+
       <!-- Recomended Consultants -->
       <div class="row customer-recomended-consultants">
         <div class="col-md-3">
