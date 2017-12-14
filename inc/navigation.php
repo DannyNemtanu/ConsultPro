@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.php">Brand</a>
+      <a class="navbar-brand" href="/consultantPro/index.php">eKonsult</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
