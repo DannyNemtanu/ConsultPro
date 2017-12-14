@@ -107,15 +107,15 @@
           <div class="col-md-12">
             <div class="row">
               <h3>Share your profile with friends!</h3>
-              <div class="row">
-                <div class="col-md-4">
-                  <a href="#"><img src="img/facebookShare.png" alt=""></a>
-                </div>
-                <div class="col-md-4">
-                  <a href="#"><img src="img/linkedinShare.png" alt=""></a>
-                </div>
-                <div class="col-md-4">
-                  <a href="#"><img src="img/twitterShare.png" alt=""></a>
+                <div class="row">
+                  <div class="col-md-4">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u="><img src="img/facebookShare.png" alt=""></a>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source="><img src="img/linkedinShare.png" alt=""></a>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="https://twitter.com/home?status="><img src="img/twitterShare.png" alt=""></a>
                 </div>
               </div>
             </div>
@@ -167,11 +167,6 @@
                   <h6>Rating: <br> 5+ Star</h6>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <button type="button" class="btn btn-primary suggested-btn" name="button">See More</button>
             </div>
           </div>
         </div>
