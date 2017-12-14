@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Brand</a>
+      <a class="navbar-brand" href="index.php">Brand</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -23,7 +23,7 @@
 
 <!-- Alert For Users -->
 <div class="modal fade" id="alert-modal" role="dialog">
-      
+
 </div>
 <!-- Choice for Sign Up -->
 <div class="modal fade signup-modal bs-example-modal-sm signup-choice" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">

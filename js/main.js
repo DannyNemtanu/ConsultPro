@@ -287,12 +287,11 @@ firebase.auth().onAuthStateChanged(function(user) {
       }, function (errorObject) {
         console.log("The read failed: " + errorObject.code);
       });
-    } else {
-      if (window.location != "http://proconsult:1111/"){
-        window.location = 'http://proconsult:1111/';
-        alert("Please Log In Before Using Our Website!");
-      };
-    };
+    }
+    else{
+      if (window.location.pathname != "/consultPro/index.php") {
+        window.location.href = "/consultPro/index.php";
+      }
+    }
   });
-
 });
