@@ -2,6 +2,13 @@
 *{
   font-family: "Lato" !important;
 }
+form .col-md-6:first-child{
+padding-left: 0px;
+}
+form .col-md-6:last-child{
+padding-right: 0px;
+}
+
 li{
   display: inline-block;
 }

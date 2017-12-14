@@ -24,7 +24,7 @@
             <li><a href="#">Profile</a></li>
             <li><a href="#">Settings</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Log Out</a></li>
+            <li><a id="user-logout" href="#">Log Out</a></li>
           </ul>
         </li>
       </ul>
