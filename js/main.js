@@ -44,7 +44,7 @@ $('#signup-customer').on('submit', function (e) {
             usersRef.child(user.uid).set(data).then(function(){
                 console.log("User Information Saved:", user.uid);
             //redirecting
-            var url = "/consultPro/customer.php";
+            var url = "/consultantPro/customer.php";
             $(location).attr("href", url);
               });
             });
@@ -81,7 +81,7 @@ $('#signup-consultant').on('submit', function (e) {
               usersRef.child(user.uid).set(data).then(function(){
                   console.log("User Information Saved:", user.uid);
                   //redirecting
-                  var url = "/consultPro/consultant.php";
+                  var url = "/consultantPro/consultant.php";
                   $(location).attr("href", url);
                 });
               });
@@ -110,10 +110,10 @@ $("#header-login-form").on('submit',function(e){
       typeRef.on("value", function(snapshot) {
           var type = snapshot.val();
           if (type == null) {
-            var url = "/consultPro/consultant.php?uid="+user.uid;
+            var url = "/consultantPro/consultant.php?uid="+user.uid;
             $(location).attr("href", url);
           }else{
-            var url = "/consultPro/customer.php?uid="+user.uid;
+            var url = "/consultantPro/customer.php?uid="+user.uid;
             $(location).attr("href", url);
             console.log(type);
           }
@@ -132,7 +132,7 @@ $("#user-logout").on("click",function(e){
   e.preventDefault();
   firebase.auth().signOut().then(function(user) {
   // Sign-out successful.
-  var url = "/consultPro/index.php";
+  var url = "/consultantPro/index.php";
   $(location).attr("href", url);
   }, function(error) {
     console.log("An error happened! : "+error);
@@ -289,8 +289,8 @@ firebase.auth().onAuthStateChanged(function(user) {
       });
     }
     else{
-      if (window.location.pathname != "/consultPro/index.php") {
-        window.location.href = "/consultPro/index.php";
+      if (window.location.pathname != "/consultantPro/index.php") {
+        window.location.href = "/consultantPro/index.php";
       }
     }
   });
