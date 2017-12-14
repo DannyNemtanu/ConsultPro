@@ -3,13 +3,14 @@ $(document).ready(function(){
 
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyDlmanYSdMK6lhKBfB2k8MMTld-Flj93NY",
-  authDomain: "testing-252d2.firebaseapp.com",
-  databaseURL: "https://testing-252d2.firebaseio.com",
-  projectId: "testing-252d2",
-  storageBucket: "testing-252d2.appspot.com",
-  messagingSenderId: "373394527981"
-};
+    apiKey: "AIzaSyBicl8axN3bA_jxCCpoVNgaN7sPsj4cgto",
+    authDomain: "econsult-web.firebaseapp.com",
+    databaseURL: "https://econsult-web.firebaseio.com",
+    projectId: "econsult-web",
+    storageBucket: "econsult-web.appspot.com",
+    messagingSenderId: "399861223853"
+  };
+
 if (firebase.initializeApp(config)) {
   console.log("App is Initialized! & Connected To Database!");
 };
