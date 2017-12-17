@@ -9,6 +9,8 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
     <!-- Custrom Css -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

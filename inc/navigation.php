@@ -14,7 +14,6 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="consultant.php">Explore</a></li>
         <li><button href="#" type="button" class="btn btn-primary nav-sign" data-toggle="modal" data-target=".signup-choice" >Sign Up</button></li>
       </ul>
     </div><!-- /.navbar-collapse -->

@@ -1,6 +1,4 @@
-
 $(document).ready(function(){
-
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyBicl8axN3bA_jxCCpoVNgaN7sPsj4cgto",
@@ -10,14 +8,86 @@ var config = {
     storageBucket: "econsult-web.appspot.com",
     messagingSenderId: "399861223853"
   };
-
 if (firebase.initializeApp(config)) {
   console.log("App is Initialized! & Connected To Database!");
 };
-
 //create firebase references
 var auth = firebase.auth();
 var dbRef = firebase.database();
+//Storage ref
+var storageRef = firebase.storage();
+var index = dbRef.ref('/');
+var ref = dbRef.ref("consultant/"+id);
+var consultantRef = dbRef.ref("consultant");
+//getting Url Parameter
+var urlParams = new URLSearchParams(window.location.search);
+var id = urlParams.get('uid');
+
+//Loading Consultants
+consultantRef.on("child_added", function(snapshot) {
+  var parrent = snapshot.key;
+  var cInfo = snapshot.val();
+  var userImg = storageRef.ref('profileImages/'+parrent+'-profileImage.png');
+  userImg.getDownloadURL().then(function(url) {
+  var singleConsultant ='<a href="consultant.php?uid='+parrent+'"><div class="row" id="'+parrent+'"> <div class="col-md-4 img"><img  src="'+url+'" alt=""></div><div class="col-md-8"><h4>'+cInfo.FirstName +" "+cInfo.LastName+'</h4><h5>Accounting | Business | Qualified</h5><h6>Rating: <br> 5+ Star</h6></div></div></a>';
+  var customerPageConsultants = '<a href="consultant.php?uid='+parrent+'"><div class="column"><div class="card"><img src="'+url+'" style="width:100%"><h2>'+cInfo.FirstName +" "+cInfo.LastName+'</h2><p style="padding:5px; max-height:85px;overflow:hidden;">'+cInfo.Description+'</p></div></div></a>';
+  var exploreConsultants = '<div class="col-md-3"><a href="consultant.php?uid='+parrent+'"><div class="card"><img src="'+url+'" style="width:100%"><h2 style="margin:0;">'+cInfo.FirstName +" "+cInfo.LastName+'</h2><p style="max-height: 60px;overflow: hidden;}">'+cInfo.Description+'</p></div></a></div>';
+  $(".consultant-suugested").append(singleConsultant);
+  $(".consultants-list").append(customerPageConsultants);
+  $(".exploreAllConsultants").append(exploreConsultants);
+  });
+});
+
+//Checking if the user is logged in
+//Getting the user informations
+firebase.auth().onAuthStateChanged(function(user) {
+  var user = firebase.auth().currentUser;
+  index.on("value",function(snapshot){
+    var indexing = snapshot.val();
+
+  });
+    if (user) {
+      //Geting the Current Consultant
+      var userImg = storageRef.ref('profileImages/'+id+'-profileImage.png');
+      userImg.getDownloadURL().then(function(url) {
+          $(".profileBanner").append('<img  id="profileImg" src="'+url+'" alt="">')
+      });
+      ref.on("value", function(snapshot) {
+        var consultant = snapshot.val();
+        console.log("Loged In As: "+ user.email);
+        if (consultant.description != null) {
+          $("#postedDesc").html(consultant.description);
+        }
+        if (consultant.job != null) {
+          $("#jCompany").html(consultant.job.CompanyName);
+          $("#jDuration").html(consultant.job.JobDate);
+          $("#jLocation").html(consultant.job.Location);
+          $("#jDuties").html(consultant.job.Description);
+        }
+        if (consultant.education != null) {
+          $("#eCollege").html(consultant.education.InstituteName);
+          $("#eDegree").html(consultant.education.Degree);
+          $("#eDuration").html(consultant.education.StartDate + " / " +consultant.education.EndDate);
+        }
+        if (consultant.certificates != null) {
+          $("#cName").html(consultant.certificates.Name);
+          $("#cLevel").html(consultant.certificates.Level);
+          $("#cDuration").html(consultant.certificates.StartDate + " / " +consultant.certificates.EndDate);
+        }
+        if (consultant.FirstName !=null) {
+          $("#fullName").html("Welcome! <br>"+consultant.FirstName +" " +consultant.LastName);
+        }
+      }, function (errorObject) {
+        console.log("The read failed: " + errorObject.code);
+      });
+    }
+    //Redirect to Home if not logged in
+    else{
+      if (window.location.pathname != "/consultantPro/index.php") {
+        window.location.href = "/consultantPro/index.php";
+      }
+    }
+  });
 
 
 //Register Customer
@@ -153,54 +223,21 @@ $(".expandDesc").on('click',function(){
   }
 });
 
-for (var i = 1; i < 3; i++) {
-  var singleConsultant ='<div class="row id'+i+'"> <div class="col-md-4 img"><img src="img/consultant.png" alt=""></div><div class="col-md-8"><h4>Name Surname</h4><h5>Accounting | Business | Qualified</h5><h6>Rating: <br> 5+ Star</h6></div></div>';
-  $(".consultant-suugested").append(singleConsultant);
-}
-//Adding Suggested registerConsultant
-$(".suggested-btn").on('click',function(){
-  if($(".suggested-btn").hasClass("no")){
-    var i = 3;
-    while(i<6){
-      var singleConsultant ='<div class="row id'+i+'"> <div class="col-md-4 img"><img src="img/consultant.png" alt=""></div><div class="col-md-8"><h4>Name Surname</h4><h5>Accounting | Business | Qualified</h5><h6>Rating: <br> 5+ Star</h6></div></div>';
-      $(".consultant-suugested").append(singleConsultant);
-      i++;
-    }
-    $(".suggested-btn").removeClass("no");
-  }else{
-    var i = 6;
-    while (i>2) {
-      $(".consultant-suugested .id"+i).addClass("hidden");
-      i--;
-    }
-    $(".suggested-btn").addClass("no");
-  }
-});
-
 
 // -------------------------------------
 // Consultant Information Submitting
 // -------------------------------------
-$(".descriptionSubmit").on('click',function(e){
-  e.preventDefault();
-    if ($("#description").val() != '' && $("#description").val().length > 50) {
-      if (user) {
+$(".descriptionSubmit").on('click',function(){
       var data = {
         description: $("#description").val()
       };
-
+      var user = firebase.auth().currentUser;
       var desc = dbRef.ref('consultant/'+user.uid);
         desc.update(data).then(function(){
           console.log("User description successfully saved!");
         });
         $("#descriptionModal").hide();
         $("#desctiptionForm").submit();
-      }else{
-        alert("Please login first...");
-      }
-    }else{
-      alert("Please fill the description area!\n There should be at least 50 charachters!");
-    }
 });
 
 // -------------------------------------
@@ -262,36 +299,42 @@ $(".certSubmit").on('click',function(){
         $("#certsForm").submit();
 });
 
-//Checking if the user is logged in
-//Getting the user informations
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in.
-      var uid = user.uid;
-      console.log("State Changed:"+user.uid);
-      var ref = dbRef.ref("consultant/"+user.uid);
-      ref.on("value", function(snapshot) {
-        var consultant = snapshot.val();
-        console.log("Loged In As: "+ user.email);
-        $("#postedDesc").html(consultant.description);
-        $("#jCompany").html(consultant.job.CompanyName);
-        $("#jDuration").html(consultant.job.JobDate);
-        $("#jLocation").html(consultant.job.Location);
-        $("#jDuties").html(consultant.job.Description);
-        $("#eCollege").html(consultant.education.InstituteName);
-        $("#eDegree").html(consultant.education.Degree);
-        $("#eDuration").html(consultant.education.StartDate + " / " +consultant.education.EndDate);
-        $("#cName").html(consultant.certificates.Name);
-        $("#cLevel").html(consultant.certificates.Level);
-        $("#cDuration").html(consultant.certificates.StartDate + " / " +consultant.certificates.EndDate);
-      }, function (errorObject) {
-        console.log("The read failed: " + errorObject.code);
-      });
-    }
-    else{
-      if (window.location.pathname != "/consultantPro/index.php") {
-        window.location.href = "/consultantPro/index.php";
+// -------------------------------------
+// Consultant Complete Profile
+// -------------------------------------
+//Image Uploding
+$("#fileButton").on('change',function(e){
+  var user = firebase.auth().currentUser;
+   //Get file
+   var file = e.target.files[0];
+   var filename =user.uid+"-profileImage.png";
+   //Storage ref
+   var storageRef = firebase.storage().ref('profileImages/'+filename);
+   //upload file
+   var task = storageRef.put(file);
+   console.log("Image successfully uploaded \nFile Path:" +storageRef);
+});
+//Info Updating
+$(".profileSubmit").on('click',function(){
+      var user = firebase.auth().currentUser;
+      var data = {
+        FirstName: $("#fname").val(),
+        LastName: $("#lname").val(),
+        Country: $("#country").val(),
+        City: $("#city").val(),
+        Street: $("#street").val(),
+        ContactPhone: $("#contactNumber").val()
       }
-    }
-  });
+      console.log("Profile Data Uploaded: "+data);
+      var info = dbRef.ref('consultant/'+user.uid);
+        info.update(data).then(function(){
+          console.log("User profile successfully saved!");
+        });
+        $("#profileForm").submit();
+        $("#completeProfileModal").hide();
+
+});
+
+
+
 });

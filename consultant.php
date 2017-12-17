@@ -5,10 +5,10 @@
  <header>
    <div class="consultant-banner">
      <div class="row container">
-       <div class="col-sm-4 col-sm-offset-4 cons-banner-left">
-         <h1>Welcome! <br> Name Surname</h1>
-         <p>Here you can see all you recent activity</p>
-         <img src="img/consultant.png" alt="">
+       <div class="col-sm-4 col-sm-offset-4 cons-banner-left profileBanner">
+         <h1 id="fullName">Please Complete Profile First</h1>
+         <p >Here you can see all you recent activity</p>
+         
        </div>
      </div>
      <div class="row" style="margin-top:20px">
@@ -411,11 +411,11 @@
           </button>
         </div>
         <div class="modal-body">
-          <form id="certsForm" role="form" method="POST" action="" name="educationForm">
+          <form id="profileForm" enctype="multipart/form-data" role="form" method="POST" action="" name="educationForm">
                     <div class="form-group">
                         <label class="control-label">Upload Profile Image</label>
                         <div>
-                          <input id="pImage" type="file" class="form-control input-lg" name="pImage">
+                          <input id="fileButton" type="file" name="pimage[]" value="upload">
                         </div>
                     </div>
                     <div class="form-group">
@@ -434,11 +434,35 @@
                         </div>
                       </div>
                     </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label class="control-label">Country</label>
+                          <div>
+                              <input id="country" type="text" class="form-control input-lg" name="country" value="" placeholder="Country">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="control-label">City</label>
+                          <div>
+                              <input id="city" type="text" class="form-control input-lg" name="city" value="" placeholder="City">
+                          </div>
+                        </div>
+                      </div>
+                    <div class="form-group">
+                      <label class="control-label">Steet</label>
+                      <input id="street" type="text" class="form-control input-lg" name="street" value="" placeholder="Sreet">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Contact Number</label>
+                      <input id="contactNumber" type="text" class="form-control input-lg" name="contactNumber" value="" placeholder="Contact Number">
+                    </div>
+                  </div>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="certSubmit btn btn-primary">Save changes</button>
+          <button type="button" class="profileSubmit btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
@@ -471,6 +495,7 @@
       </div>
     </div>
   </div>
+
 
 <!-- end content -->
 <?php include 'inc/footer.php'; ?>

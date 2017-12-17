@@ -8,21 +8,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/index.php">eKonsult</a>
+      <a class="navbar-brand" href="/consultantPro/customer.php">eKonsult</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="consultant.php">Search</a></li>
-        <li><a href="consultant.php">Explore</a></li>
-        <li><a href="customer.php">Customer</a></li>
+        <li><a href="exploreConsultants.php">Consultants</a></li>
         <li class="dropdown">
-          <a href="#" id="user-welcome" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome Name Surname! <span class="caret"></span></a>
+          <a href="#" id="user-welcome" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome! <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Settings</a></li>
-            <li role="separator" class="divider"></li>
             <li><a href="#" id="user-logout">Log Out</a></li>
           </ul>
         </li>

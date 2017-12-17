@@ -15,9 +15,6 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="consultant.php">Search</a></li>
-        <li><a href="consultant.php">Explore</a></li>
-        <li><a href="customer.php">Customer</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
           <ul class="dropdown-menu">
