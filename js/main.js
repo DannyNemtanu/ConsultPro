@@ -11,17 +11,19 @@ var config = {
 if (firebase.initializeApp(config)) {
   console.log("App is Initialized! & Connected To Database!");
 };
+
+
 //create firebase references
 var auth = firebase.auth();
 var dbRef = firebase.database();
 //Storage ref
 var storageRef = firebase.storage();
 var index = dbRef.ref('/');
-var ref = dbRef.ref("consultant/"+id);
 var consultantRef = dbRef.ref("consultant");
 //getting Url Parameter
 var urlParams = new URLSearchParams(window.location.search);
 var id = urlParams.get('uid');
+
 
 //Loading Consultants
 consultantRef.on("child_added", function(snapshot) {
@@ -42,19 +44,18 @@ consultantRef.on("child_added", function(snapshot) {
 //Getting the user informations
 firebase.auth().onAuthStateChanged(function(user) {
   var user = firebase.auth().currentUser;
-  index.on("value",function(snapshot){
-    var indexing = snapshot.val();
-
-  });
+  var uid = user.uid;
+  console.log("UID:"+uid+"\nID:"+id);
     if (user) {
       //Geting the Current Consultant
+      $(".consutlant-nav").append('<a class="navbar-brand" href="consultant.php?uid='+user.uid+'">eKonsult</a>');
       var userImg = storageRef.ref('profileImages/'+id+'-profileImage.png');
       userImg.getDownloadURL().then(function(url) {
-          $(".profileBanner").append('<img  id="profileImg" src="'+url+'" alt="">')
+        $(".profileBanner").append('<img  id="profileImg" src="'+url+'" alt="">');
       });
+      var ref = dbRef.ref("consultant/"+id);
       ref.on("value", function(snapshot) {
         var consultant = snapshot.val();
-        console.log("Loged In As: "+ user.email);
         if (consultant.description != null) {
           $("#postedDesc").html(consultant.description);
         }
@@ -74,8 +75,12 @@ firebase.auth().onAuthStateChanged(function(user) {
           $("#cLevel").html(consultant.certificates.Level);
           $("#cDuration").html(consultant.certificates.StartDate + " / " +consultant.certificates.EndDate);
         }
-        if (consultant.FirstName !=null) {
-          $("#fullName").html("Welcome! <br>"+consultant.FirstName +" " +consultant.LastName);
+        if (uid == id) {
+          if (consultant.FirstName !=null) {
+            $("#fullName").html("Welcome! <br>"+consultant.FirstName +" " +consultant.LastName);
+          }
+        }else{
+          $("#fullName").html("Consultant! <br>"+consultant.FirstName +" " +consultant.LastName);
         }
       }, function (errorObject) {
         console.log("The read failed: " + errorObject.code);
@@ -88,6 +93,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       }
     }
   });
+
 
 
 //Register Customer
@@ -114,7 +120,7 @@ $('#signup-customer').on('submit', function (e) {
             usersRef.child(user.uid).set(data).then(function(){
                 console.log("User Information Saved:", user.uid);
             //redirecting
-            var url = "/consultantPro/customer.php";
+            var url = "/consultantPro/customer.php?uid="+user.uid;
             $(location).attr("href", url);
               });
             });
@@ -151,7 +157,7 @@ $('#signup-consultant').on('submit', function (e) {
               usersRef.child(user.uid).set(data).then(function(){
                   console.log("User Information Saved:", user.uid);
                   //redirecting
-                  var url = "/consultantPro/consultant.php";
+                  var url = "/consultantPro/consultant.php?uid="+user.uid;
                   $(location).attr("href", url);
                 });
               });
@@ -310,10 +316,31 @@ $("#fileButton").on('change',function(e){
    var filename =user.uid+"-profileImage.png";
    //Storage ref
    var storageRef = firebase.storage().ref('profileImages/'+filename);
+
    //upload file
    var task = storageRef.put(file);
-   console.log("Image successfully uploaded \nFile Path:" +storageRef);
-});
+
+   task.on('state_changed', function(snapshot){
+     // Observe state change events such as progress, pause, and resume
+     // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+     var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+     console.log('Upload is ' + progress + '% done');
+     switch (snapshot.state) {
+       case firebase.storage.TaskState.PAUSED: // or 'paused'
+         console.log('Upload is paused');
+         break;
+       case firebase.storage.TaskState.RUNNING: // or 'running'
+         console.log('Upload is running');
+         break;
+     }
+   }, function(error) {
+     // Handle unsuccessful uploads
+   }, function() {
+     // Handle successful uploads on complete
+     // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+     var downloadURL = task.snapshot.downloadURL;
+   });
+ });
 //Info Updating
 $(".profileSubmit").on('click',function(){
       var user = firebase.auth().currentUser;
@@ -334,7 +361,5 @@ $(".profileSubmit").on('click',function(){
         $("#completeProfileModal").hide();
 
 });
-
-
 
 });
